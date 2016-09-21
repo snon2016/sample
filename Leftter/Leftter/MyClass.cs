@@ -1,10 +1,12 @@
 ﻿using System;
+
 namespace Leftter
 {
-	public class MyClass
-	{
-		public MyClass()
-		{
-		}
-	}
+    public class MyClass
+    {
+        public MyClass()
+        {
+        }
+    }
 }
+

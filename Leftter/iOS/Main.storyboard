@@ -45,7 +45,12 @@
                         </subviews>
                         <color key="backgroundColor" customColorSpace="calibratedWhite" cocoaTouchSystemColor="darkTextColor"/>
                     </view>
-                    <connections/>
+                    <connections>
+                        <outlet property="logTextView" destination="11" id="name-outlet-11"/>
+                        <outlet property="getButton" destination="15" id="name-outlet-15"/>
+                        <outlet property="sendButton" destination="14" id="name-outlet-14"/>
+                        <outlet property="sendText" destination="16" id="name-outlet-16"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

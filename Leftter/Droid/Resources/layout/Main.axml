@@ -1,52 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
-    <LinearLayout
-        android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="463.0dp"
-        android:id="@+id/linearLayout1"
+        android:layout_height="430dp"
         android:minWidth="25px"
         android:minHeight="25px">
-        <EditText
-            android:inputType="textMultiLine"
+        <ListView
+            android:minWidth="25px"
+            android:minHeight="25px"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/logText"
-            android:enabled="false"
-            android:gravity="bottom" />
-    </LinearLayout>
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:id="@+id/logListView" />
+    </FrameLayout>
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/linearLayout2">
-        <LinearLayout
-            android:orientation="vertical"
+        android:layout_height="80dp">
+        <FrameLayout
             android:minWidth="25px"
             android:minHeight="25px"
-            android:layout_width="228.5dp"
-            android:layout_height="match_parent"
-            android:id="@+id/linearLayout3">
-            <EditText
-                android:layout_width="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <Button
+                android:text="Get"
+                android:layout_width="80dp"
                 android:layout_height="match_parent"
-                android:id="@+id/sendText" />
-        </LinearLayout>
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/linearLayout4"
+                android:id="@+id/getButton" />
+        </FrameLayout>
+        <FrameLayout
             android:minWidth="25px"
-            android:minHeight="25px">
+            android:minHeight="25px"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content">
+            <EditText
+                android:inputType="textMultiLine"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:id="@+id/sendEditText" />
+        </FrameLayout>
+        <FrameLayout
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
             <Button
                 android:text="Send"
-                android:layout_width="match_parent"
+                android:layout_width="80dp"
                 android:layout_height="match_parent"
                 android:id="@+id/sendButton" />
-        </LinearLayout>
+        </FrameLayout>
     </LinearLayout>
 </LinearLayout>

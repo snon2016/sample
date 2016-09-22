@@ -6,15 +6,19 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Java.Lang;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace Leftter.Droid
 {
 	[Activity (Label = "Leftter.Droid", MainLauncher = true, Icon = "@drawable/icon")]
 	public class MainActivity : Activity
 	{
-		int count = 1;
+        //ObservableCollection<string> cell = new ObservableCollection<string>();
+        ArrayAdapter cell;
 
-		protected override void OnCreate (Bundle bundle)
+        protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
 
@@ -24,12 +28,17 @@ namespace Leftter.Droid
 			// Get our button from the layout resource,
 			// and attach an event to it
 			Button sendButton = FindViewById<Button>(Resource.Id.sendButton);
-            EditText sendText = FindViewById<EditText>(Resource.Id.sendText);
-            EditText logText = FindViewById<EditText>(Resource.Id.logText);
+            EditText sendEditText = FindViewById<EditText>(Resource.Id.sendEditText);
+            var logListView = FindViewById<ListView>(Resource.Id.logListView);
 
-			sendButton.Click += delegate {
-                logText.Text += sendText.Text + "\n";
-                sendText.Text = string.Empty;
+            cell = new ArrayAdapter(this, Android.Resource.Layout.SimpleListItem1);
+            logListView.Adapter = cell;
+
+
+            sendButton.Click += delegate {
+                cell.Add(sendEditText.Text);
+                logListView.SetSelection(cell.Count - 1);
+                sendEditText.Text = string.Empty;
 			};
 		}
 	}

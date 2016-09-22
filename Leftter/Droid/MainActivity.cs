@@ -26,7 +26,7 @@ namespace Leftter.Droid
 			Button sendButton = FindViewById<Button>(Resource.Id.sendButton);
             EditText sendText = FindViewById<EditText>(Resource.Id.sendText);
             EditText logText = FindViewById<EditText>(Resource.Id.logText);
-			
+
 			sendButton.Click += delegate {
                 logText.Text += sendText.Text + "\n";
                 sendText.Text = string.Empty;

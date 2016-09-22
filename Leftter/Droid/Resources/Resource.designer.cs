@@ -41,11 +41,45 @@ namespace Leftter.Droid
 			}
 		}
 		
+		public partial class Drawable
+		{
+			
+			// aapt resource value: 0x7f020000
+			public const int Icon = 2130837504;
+			
+			static Drawable()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Drawable()
+			{
+			}
+		}
+		
 		public partial class Id
 		{
 			
 			// aapt resource value: 0x7f050000
-			public const int myButton = 2131034112;
+			public const int linearLayout1 = 2131034112;
+			
+			// aapt resource value: 0x7f050002
+			public const int linearLayout2 = 2131034114;
+			
+			// aapt resource value: 0x7f050003
+			public const int linearLayout3 = 2131034115;
+			
+			// aapt resource value: 0x7f050005
+			public const int linearLayout4 = 2131034117;
+			
+			// aapt resource value: 0x7f050001
+			public const int logText = 2131034113;
+			
+			// aapt resource value: 0x7f050006
+			public const int sendButton = 2131034118;
+			
+			// aapt resource value: 0x7f050004
+			public const int sendText = 2131034116;
 			
 			static Id()
 			{
@@ -69,22 +103,6 @@ namespace Leftter.Droid
 			}
 			
 			private Layout()
-			{
-			}
-		}
-		
-		public partial class Mipmap
-		{
-			
-			// aapt resource value: 0x7f020000
-			public const int Icon = 2130837504;
-			
-			static Mipmap()
-			{
-				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
-			}
-			
-			private Mipmap()
 			{
 			}
 		}
